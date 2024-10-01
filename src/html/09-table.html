@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 관련 요소 | Techit</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid currentColor;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>테이블 관련 요소</h1>
+    <table>
+      <caption>
+        과목별 성적표
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">이름</th>
+          <th scope="col">HTML</th>
+          <th scope="col">CSS</th>
+          <th scope="col">Javascript</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">홍길동</th>
+          <td>95</td>
+          <td>87</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <th scope="row">이영희</th>
+          <td>98</td>
+          <td>75</td>
+          <td>88</td>
+        </tr>
+      </tbody>
+      <tbody style="background: yellow">
+        <tr>
+          <th scope="row">김철수</th>
+          <td>95</td>
+          <td>87</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <th scope="row">나성실</th>
+          <td>98</td>
+          <td>75</td>
+          <td>88</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Event</th>
+        <th>Venue</th>
+      </tr>
+      <tr>
+        <td>12 February</td>
+        <td>Waltz with Strauss</td>
+        <td>Main Hall</td>
+      </tr>
+    </table>
+
+    <table>
+      <caption>
+        강좌 정보
+      </caption>
+      <tbody>
+        <tr>
+          <th id="study-time">학습시간</th>
+          <td headers="study-time">09:00~17:00(28시간)</td>
+          <th id="difficulty">난이도</th>
+          <td headers="difficulty">초급</td>
+        </tr>
+        <tr>
+          <th id="expenses">교육비 지원</th>
+          <td headers="expenses">고용보험 비환급</td>
+          <th id="evaluation">평가항목</th>
+          <td headers="evaluation">출석률 100%</td>
+        </tr>
+        <tr>
+          <th id="lect05">수료기준</th>
+          <td headers="lect05">총점 80점 이상시 수료</td>
+          <th id="">정원</th>
+          <td headers="lect06">24명</td>
+        </tr>
+        <tr>
+          <th id="textbook">교재정보</th>
+          <td headers="textbook" colspan="3">
+            <p>입문자를 위한 GIT과 HTML&CSS</p>
+            <p>HTML&CSS웹사이트 개발과 디자인 기초 (35,000원)</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -13,13 +13,44 @@
         <legend>input 요소를 활용한 다양한 양식 만들기</legend>
         <!-- 한줄 글상자 (text) -->
         <!-- required 속성 추가하면 전송버튼 눌렀을 시 공란일 때 validation 알림이 뜬다. (input type 속성으로 검증)-->
-        <p><input type="text" name="user-name" id="user-name" required /></p>
+        <!-- 입력서식은 1:1로 대응되는 lable을 반드시 사용해야 한다. lable 안에 input이 들어갈 경우 문법상 맞지만 스크린 리더가 읽어주지 못함-->
+        <!-- 카드번호 같이 여러게의 input이 있을 경우 aria-label을 사용하여 lable 값을 할당한다. -->
+        <p>
+          <label for="user-name">이름</label>
+          <input type="text" name="user-name" id="user-name" required />
+        </p>
         <!-- 검색어 입력상자 (search) -->
-        <p><input type="search" name="search" id="search" /></p>
+        <p>
+          <lable for="search">검색어</lable>
+          <input type="search" name="search" id="search" />
+        </p>
         <!-- 이메일 입력 서식 (email) -->
-        <p><input type="email" name="user-email" id="user-email" required /></p>
+        <p>
+          <lable for="user-email">이메일</lable>
+          <input type="email" name="user-email" id="user-email" required />
+        </p>
         <!-- 숫자 입력 서식 (tel) -->
-        <p><input type="tel" name="user-phone" id="user-phone" required /></p>
+        <p>
+          <lable for="user-phone">연락처</lable>
+          <input type="tel" name="user-phone" id="user-phone" required />
+        </p>
+        <!-- 체크박스 서식 (checkbox) -->
+        <!-- name은 서버에 보냈을 때 데이터를 구분하기 위한 필드의 이름 -->
+        <!-- value는 실제 데이터베이스에 저장될 값을 저장한다. -->
+        <p>
+          <input value="html" checked type="checkbox" name="likelion-class" id="html" required />
+          <lable for="html">html</lable>
+          <input value="css" checked type="checkbox" name="likelion-class" id="css" required />
+          <lable for="css">css</lable>
+          <input value="Javascript" checked type="checkbox" name="likelion-class" id="Javascript" required />
+          <lable for="Javascript">Javascript</lable>
+          <input value="react" checked type="checkbox" name="likelion-class" id="react" required />
+          <lable for="react">react</lable>
+        </p>
+        <!-- 라디오 서식 (radio) -->
+        <!-- name을 동일하게 주면 둘 중 선택한 하나의 값만 담긴다. 같은 카테고리라는 의미 -->
+        <p><input value="회고 1팀" type="radio" name="techit-class" id="class-1" required />회고 1팀 <input type="radio" value="회고 2팀" name="techit-class" id="class-2" required />회고 2팀</p>
+
         <button type="submit">전송</button>
       </fieldset>
     </form>

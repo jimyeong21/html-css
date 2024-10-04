@@ -88,3 +88,12 @@ h6 span {
   background-color: lightgreen;
   color: red;
 }
+
+h6:has(+ p) {
+  border: solid 1px green;
+  padding: 10px;
+}
+p:has(strong) {
+  border: solid 1px red;
+  padding: 10px;
+}

@@ -1,0 +1,35 @@
+@import "./../../common/best-reset.css";
+@import "./../../common/a11y.css";
+@import "./../../common/theme.css";
+@import "./../../common/base.css";
+@import "./../../common/components/thumbnail-card.css";
+
+section {
+  margin: 0 auto;
+  max-width: 810px;
+  inset-inline: 50px;
+}
+.table-type01 {
+  table-layout: fixed;
+  width: 100%;
+  inline-size: 100%;
+  border-block-start: 2px solid #24388d;
+  border-block-end: 2px solid #24388d;
+}
+.table-type01 thead {
+  text-align: center;
+  height: 36px;
+  block-size: 36px;
+}
+.table-type01 tbody tr td {
+  border-block-start: 1px solid #919bc6;
+}
+.col-number {
+  width: 10%;
+}
+.col-content {
+  width: 70%;
+}
+.col-date {
+  width: 20%;
+}

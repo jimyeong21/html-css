@@ -5,6 +5,27 @@ div {
   font-size: 3rem;
   border: 1px solid currentColor;
 }
+
+/* 요소 박스 위치 지정 */
+body div.percentage-value {
+  border: 1px solid currentColor;
+  padding: 10px;
+  margin: 1em;
+  font-size: 1rem;
+  width: 200px;
+  inline-size: 200px;
+
+  p {
+    padding: 10%;
+    margin: 0;
+    border: inherit;
+    position: relative;
+    background-color: tomato;
+    left: 50%;
+    inset-inline-start: 50%;
+  }
+}
+
 .static {
   background: yellow;
 }
@@ -16,7 +37,7 @@ div {
 }
 .relative-wrapper {
   position: relative;
-  inset-block-start: 50px;
+  inset-block-start: 250px;
   inset-inline-start: 50px;
 }
 .absolute-wrapper {

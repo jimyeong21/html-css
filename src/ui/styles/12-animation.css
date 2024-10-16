@@ -1,0 +1,88 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+h1,
+h2,
+button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-block: 1rem;
+}
+
+.button--burger {
+  position: relative;
+  width: 24px;
+  inline-size: 24px;
+  height: 24px;
+  block-size: 24px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .burger-bar {
+    position: absolute;
+    inset-inline: 0;
+    height: 20%;
+    block-size: 20%;
+    background-color: currentColor;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+
+  .burger-bar-top {
+    inset-block-start: 0;
+  }
+
+  .burger-bar-middle {
+    inset-block-start: 50%;
+    translate: 0 -50%;
+    /* transform: translateY(-50%); */
+  }
+
+  .burger-bar-bottom {
+    inset-block-start: 100%;
+    translate: 0 -100%;
+    /* transform: translateY(-100%); */
+  }
+
+  &:hover {
+    .burger-bar-top {
+      inset-block-start: 50%;
+      translate: 0 -50%;
+      rotate: -45deg;
+      /* transform: rotate(45deg) translateY(-50%); */
+    }
+    .burger-bar-middle {
+      translate: 120% -50%;
+      /* transform: translate(-120%, -50%); */
+    }
+    .burger-bar-bottom {
+      inset-block-start: 50%;
+      translate: 0 -50%;
+      rotate: 45deg;
+      /* transform: translateY(-50%) rotate(-45deg); */
+    }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.loading-spinner {
+  width: 48px;
+  inline-size: 48px;
+  height: 48px;
+  block-size: 48px;
+  color: var(--red);
+
+  svg {
+    animation: spinner 1s infinite steps(12);
+  }
+}
